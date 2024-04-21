@@ -2,7 +2,7 @@
 Alt_School Second semester project (GitHub Repo Clone)
 
 # Website Link
-<a href="https://github-clone-24.web.app/" target="_blank"><ins>Github-clone-24<ins><a>
+<a href="" target="_blank"><ins>Github-clone-24<ins><a>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -16,10 +16,10 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone (https://github.com/Philip-Nwabuwa/Alt-School-Exam-Project.git)
+   git clone (https://github.com/DavidIorwuese/Second-semester-Exams.git)
    ```
 2. Install NPM packages
    ```sh
-   npm install
+   yarn install
    ```
 4. Enjoy

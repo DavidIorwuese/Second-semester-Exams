@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
 import axios from "axios";
-import { InfinitySpin } from "react-loader-spinner";
+import { Oval } from "react-loader-spinner";
 import { useLocation } from "react-router-dom";
-import ErrorBoundary from "../Components/errorBoundary";
 
 const singleRepo = () => {
   const location = useLocation();
@@ -23,18 +21,12 @@ const singleRepo = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <InfinitySpin width="200" color="#fff" />
+        <Oval width="200" color="#fff" />
       </div>
     );
   }
   return (
     <div>
-      <Helmet>
-        <title>{location.state.name}</title>
-        <meta name="description" content={location.state.name} />
-        <link rel="canonical" to={`/repo/:repoId`} />
-      </Helmet>
-      <ErrorBoundary>
         <div className=" bg-[#242424] text-white h-screen pt-20 md:pt-24 items-center justify-center">
           <div className="flex flex-col items-center justify-center font-bold">
             <h1 className="mb-6 text-2xl">
@@ -82,7 +74,6 @@ const singleRepo = () => {
             </div>
           </div>
         </div>
-      </ErrorBoundary>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import axios from "axios";
-import { InfinitySpin } from "react-loader-spinner";
+import { Oval } from "react-loader-spinner";
 import { BiSearchAlt } from "react-icons/bi";
 import "../index.css";
 
@@ -75,16 +75,13 @@ const search = () => {
     });
   };
 
-  console.log(data);
 
   return (
     <div className="main">
       <div className="flex pt-[80px] justify-center items-center">
         <div className="flex flex-col justify-center text-center items-center">
           <h1 className="uppercase mb-[20px] text-[24px]">
-            search for any github username{" "}
-            <div className="hidden md:inline">/ organization</div>
-          </h1>
+            search for any github username          </h1>
           <form
             className="flex justify-center items-center"
             onSubmit={submitHandler}
@@ -110,7 +107,7 @@ const search = () => {
 
       {loading && (
         <div className="flex item-center justify-center mt-[60px]">
-          <InfinitySpin width="200" color="#fff" />
+          <Oval width="200" color="#fff" />
         </div>
       )}
       {error && (

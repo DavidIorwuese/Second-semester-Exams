@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import pageError from "../Assets/pageError.svg";
+import pageError from "../assets/pageError.svg";
 
 const page404 = () => {
   return (

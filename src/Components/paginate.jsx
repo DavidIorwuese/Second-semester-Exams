@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 
 const paginate = (props) => {
   const { data } = props;
@@ -9,8 +8,6 @@ const paginate = (props) => {
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 3;
-
-  console.log(data);
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -23,18 +20,8 @@ const paginate = (props) => {
     setItemOffset(newOffset);
   };
 
-  console.log(repos);
-  console.log(data);
-
   return (
     <>
-      <Helmet>
-        <title>{data[0].owner.login} Repos</title>
-        <meta
-          name="description"
-          content="Philip Nwabuwa's Github Repositries"
-        />
-      </Helmet>
       <h1 className="text-xl md:text-2xl text-center justify-center font-bold pt-24 pb-2">
         List of Repos by {data[0].owner.login}
       </h1>

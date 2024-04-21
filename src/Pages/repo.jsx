@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-import { InfinitySpin } from "react-loader-spinner";
+import { Oval } from "react-loader-spinner";
 import Paginate from "../Components/paginate";
-import ErrorBoundary from "../Components/errorBoundary";
 
 const ListOfRepos = () => {
   const location = useLocation();
@@ -27,18 +26,16 @@ const ListOfRepos = () => {
     return (
       <>
         <div className="flex justify-center items-center h-screen">
-          <InfinitySpin width="200" color="#fff" />
+          <Oval width="200" color="#fff" />
         </div>
       </>
     );
   }
   return (
     <>
-      <ErrorBoundary>
         <div className="main">
           <Paginate data={repos} />
         </div>
-      </ErrorBoundary>
     </>
   );
 };
